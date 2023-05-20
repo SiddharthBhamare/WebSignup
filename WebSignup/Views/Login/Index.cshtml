@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "LoginLayout";
+}
+@model WebSignup.Models.User
+
+<div id="ActualBody">
+    <div class="login">
+        <form asp-controller="Login" asp-action="Login" method="post">
+            <label for="chk" aria-hidden="true">Login</label>
+            <input type="UserName" name="UserName" placeholder="User Name" required="">
+            <input type="password" name="Password" placeholder="Password" required="">
+            <button>Login</button>
+            <div class="text-align-center">
+                <span asp-validation-for="UserName" class="text-danger"></span>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </form>
+    </div>
+</div>
+

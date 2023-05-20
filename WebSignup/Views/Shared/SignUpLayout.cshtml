@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Register User </title>
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body class="main-body width-100">
+	<div class="width-60">	
+		<img src="/images/Reg-Back.jpeg" width="800" height="600" />
+			@RenderSection("Errors",false)
+		<div>
+			<a class="button Login-img-button-pos login-btn-custm-size" asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+		</div>
+	</div>
+	<div class="main">
+		@RenderBody()
+	</div>
+</body>
+</html>

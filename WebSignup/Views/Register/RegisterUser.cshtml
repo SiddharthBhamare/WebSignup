@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "SignUpLayout";
+}
+@model WebSignup.Models.User
+
+<div id="ActualBody">
+    <input type="checkbox" id="chk" aria-hidden="true">
+    <form asp-controller="Register" asp-action="RegisterUser" method="post">
+        <div class="signup">
+            <label aria-hidden="true">Sign up</label>
+            <input type="text" name="UserName" placeholder="User name" asp-for="UserName" />
+            <input type="email" name="email" placeholder="Email" asp-for="Email" />
+            <input type="text" name="Phone" placeholder="Phone" asp-for="Phone" />
+            <input type="text" name="Address" placeholder="Address" asp-for="Address" />
+            <input type="password" name="Password" placeholder="Password" asp-for="Password" />
+            <input type="password" name="ConfirmPassword" placeholder="Confirm Password" Test="Test" asp-for="ConfirmPassword" />
+            <button>Sign up</button>
+        </div>
+    </form>
+</div>
+@section Errors{
+    <div class="text-align-center">
+        <span asp-validation-for="UserName" class="text-danger"></span>
+        <span asp-validation-for="Email" class="text-danger"></span>
+        <span asp-validation-for="Phone" class="text-danger"></span>
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+}
+
